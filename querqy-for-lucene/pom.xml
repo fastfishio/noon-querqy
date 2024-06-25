@@ -10,7 +10,7 @@
 
     <groupId>org.querqy</groupId>
     <artifactId>querqy-for-lucene</artifactId>
-    <version>5.8.lucene942.0-SNAPSHOT</version>
+    <version>5.7.lucene992.0</version>
     <packaging>pom</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
@@ -24,66 +24,37 @@
         </license>
     </licenses>
 
-    <developers>
-        <developer>
-            <id>renekrie</id>
-            <name>René Kriegler</name>
-            <email>post@rene-kriegler.com</email>
-            <url>https://github.com/renekrie</url>
-        </developer>
-        <developer>
-            <id>mkr</id>
-            <name>Matthias Krüger</name>
-            <url>https://github.com/mkr</url>
-        </developer>
-        <developer>
-            <id>JohannesDaniel</id>
-            <name>Johannes Peter</name>
-            <email>johannesdaniel.peter@gmx.de</email>
-            <url>https://github.com/JohannesDaniel</url>
-        </developer>
-    </developers>
-
-
-    <scm>
-        <url>git@github.com:querqy/querqy.git</url>
-        <connection>scm:git:git@github.com:querqy/querqy.git</connection>
-        <developerConnection>scm:git:git@github.com:querqy/querqy.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-
     <prerequisites>
         <maven>3.3.0</maven>
     </prerequisites>
 
     <properties>
 
-        <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
-        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
+        <maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.1.2</maven-jar-plugin.version>
         <maven-release-plugin.version>3.0.1</maven-release-plugin.version>
-        <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-        <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
-        <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
-        <maven-failsafe-plugin.version>3.2.5</maven-failsafe-plugin.version>
+        <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>3.6.0</maven-javadoc-plugin.version>
+        <maven-surefire-plugin.version>3.2.1</maven-surefire-plugin.version>
+        <maven-failsafe-plugin.version>3.2.1</maven-failsafe-plugin.version>
         <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <junit.version>4.13.2</junit.version>
         <hamcrest.version>2.1</hamcrest.version>
         <mockito.version>5.11.0</mockito.version>
         <skipITs>true</skipITs>
 
         <querqy.core.version>3.17.0</querqy.core.version>
-        <lucene.version>9.8.0</lucene.version>
+        <lucene.version>9.9.2</lucene.version>
         <commons.io.version>2.14.0</commons.io.version>
 
     </properties>
 
     <modules>
         <module>querqy-lucene</module>
-        <module>querqy-solr</module>
     </modules>
 
     <dependencies>
@@ -128,7 +99,7 @@
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <tests.codec>Lucene95</tests.codec>
+                        <tests.codec>Lucene99</tests.codec>
                         <java.security.egd>file:/dev/./urandom</java.security.egd>
                         <!-- Use narrow US-ASCII as default Java character set (via file.encoding system property)
                         to increase the chance of catching code that relies on the JDK default encoding -->
@@ -213,7 +184,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>3.2.2</version>
+                        <version>3.1.0</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>

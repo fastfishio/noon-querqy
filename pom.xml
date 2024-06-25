@@ -30,33 +30,6 @@
         </license>
     </licenses>
 
-    <developers>
-        <developer>
-            <id>renekrie</id>
-            <name>René Kriegler</name>
-            <email>post@rene-kriegler.com</email>
-            <url>https://github.com/renekrie</url>
-        </developer>
-        <developer>
-            <id>mkr</id>
-            <name>Matthias Krüger</name>
-            <url>https://github.com/mkr</url>
-        </developer>
-        <developer>
-            <id>JohannesDaniel</id>
-            <name>Johannes Peter</name>
-            <email>johannesdaniel.peter@gmx.de</email>
-            <url>https://github.com/JohannesDaniel</url>
-        </developer>
-    </developers>
-
-    <scm>
-        <url>git@github.com:querqy/querqy.git</url>
-        <connection>scm:git:git@github.com:querqy/querqy.git</connection>
-        <developerConnection>scm:git:git@github.com:querqy/querqy.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-
     <prerequisites>
         <maven>3.3.0</maven>
     </prerequisites>
